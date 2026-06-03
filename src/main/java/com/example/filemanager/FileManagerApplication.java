@@ -1670,6 +1670,11 @@ public class FileManagerApplication {
                     .side-nav{display:grid;gap:8px}
                     .side-nav a{display:flex;align-items:center;min-height:42px;padding:10px 12px;border-radius:8px;color:#bfdbfe;font-weight:800;border:1px solid transparent}
                     .side-nav a:hover,.side-nav a.active{background:rgba(14,165,233,.14);color:#e0f2fe;border-color:rgba(34,211,238,.28);box-shadow:inset 0 0 20px rgba(34,211,238,.08)}
+                    .external-search{display:grid;gap:10px;background:rgba(8,24,46,.72);border:1px solid rgba(125,211,252,.22);border-radius:8px;padding:12px}
+                    .external-search label{display:block;color:#67e8f9;font-size:12px;font-weight:900;text-transform:uppercase}
+                    .external-search-row{display:grid;grid-template-columns:minmax(0,1fr) 42px;gap:8px}
+                    .external-search input{min-width:0;min-height:38px;padding:8px 10px}
+                    .external-search-button{width:42px;min-height:38px;border:0;border-radius:8px;background:linear-gradient(135deg,#06b6d4,#2563eb);color:white;font-weight:900;box-shadow:0 0 20px rgba(14,165,233,.24)}
                     .storage-note{margin-top:auto;background:rgba(8,24,46,.72);border:1px solid rgba(125,211,252,.22);border-radius:8px;padding:12px;color:#93aecd}
                     .storage-note strong{display:block;color:#e0f2fe;margin-top:4px}
                     .content-shell{min-width:0}
@@ -1744,7 +1749,7 @@ public class FileManagerApplication {
                     @media(max-width:940px){
                       .app-shell{grid-template-columns:1fr}
                       .sidebar{position:static;border-right:0;border-bottom:1px solid rgba(125,211,252,.18);flex-direction:row;align-items:center;flex-wrap:wrap}
-                      .side-nav{display:flex;flex-wrap:wrap}.storage-note{display:none}
+                      .side-nav{display:flex;flex-wrap:wrap}.external-search{width:min(360px,100%)}.storage-note{display:none}
                       .stats-grid,.command-grid{grid-template-columns:1fr}
                       .command-card{grid-template-columns:1fr}
                       .search-bar{grid-template-columns:1fr}
@@ -1800,6 +1805,13 @@ public class FileManagerApplication {
                         <a class="%s" href="/trash">回收站</a>
                         %s
                       </nav>
+                      <form class="external-search" action="https://www.baidu.com/s" method="get" target="_blank" rel="noopener noreferrer">
+                        <label for="external-search-keyword">&#32593;&#32476;&#25628;&#32034;</label>
+                        <div class="external-search-row">
+                          <input id="external-search-keyword" type="search" name="wd" placeholder="Baidu" autocomplete="off" required>
+                          <button class="external-search-button" type="submit" title="Baidu search" aria-label="Baidu search">&#128269;</button>
+                        </div>
+                      </form>
                       <div class="storage-note"><span>运行环境</span><strong>Java 17 HttpServer</strong></div>
                     </aside>
                     <div class="content-shell">
