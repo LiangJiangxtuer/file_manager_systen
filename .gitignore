@@ -1,0 +1,13 @@
+out/
+data/
+storage/
+*.log
+.class
+target/
+.idea/
+.vscode/
+*.iml
+*.tmp
+.DS_Store
+Thumbs.db
+.git_alt/
