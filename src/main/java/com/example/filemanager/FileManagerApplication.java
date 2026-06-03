@@ -1706,10 +1706,13 @@ public class FileManagerApplication {
                     .meta{color:#93aecd}
                     .path-line a{color:#bae6fd}.path-line span{margin:0 7px;color:#3b82f6}
                     .folder-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}
-                    .folder-card{display:grid;gap:10px;min-height:62px;border:1px solid rgba(125,211,252,.22);border-radius:8px;padding:12px;color:#dbeafe;background:rgba(2,8,23,.26);font-weight:800}
+                    .folder-card{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px;min-height:62px;border:1px solid rgba(125,211,252,.22);border-radius:8px;padding:12px;color:#dbeafe;background:rgba(2,8,23,.26);font-weight:800}
                     .folder-card:hover{border-color:rgba(34,211,238,.58);background:rgba(14,165,233,.12);transform:translateY(-1px)}
                     .folder-open{display:flex;align-items:center;gap:11px;color:#e0f2fe}
                     .folder-rename,.rename-form{display:flex;gap:6px;align-items:center}
+                    .folder-open,.folder-rename{grid-column:1/-1}
+                    .folder-card>.link-action{justify-self:start;min-height:34px}
+                    .folder-card>form:not(.folder-rename){justify-self:start}
                     .folder-icon{width:34px;height:28px;border-radius:6px;background:linear-gradient(135deg,#06b6d4,#2563eb);position:relative;box-shadow:0 0 18px rgba(34,211,238,.28),inset 0 -8px 0 rgba(255,255,255,.12)}
                     .folder-icon:before{content:"";position:absolute;left:3px;top:-5px;width:15px;height:8px;border-radius:5px 5px 0 0;background:#38bdf8}
                     .table-wrap{width:100%;overflow:auto;border:1px solid rgba(125,211,252,.22);border-radius:8px}
